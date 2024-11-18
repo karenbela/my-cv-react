@@ -11,6 +11,75 @@ body {
   justify-content: flex-start;
   min-height: 100vh; /* Tampilan layar penuh */
 }
+/* Header */
+header {
+  width: 100%; /* Lebar penuh */
+  background-color: #4C1D3D; /* Warna latar belakang header */
+  padding: 15px 0; /* Jarak atas dan bawah */
+  text-align: center; /* Teks di tengah */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Bayangan di bawah header */
+}
+
+nav {
+  margin-bottom: 10px; /* Jarak antara nav dan judul */
+}
+
+nav ul {
+  list-style-type: none; /* Menghilangkan bullet */
+  padding: 0; /* Menghilangkan padding */
+  display: flex; /* Mengatur menu menjadi flex container */
+  justify-content: center; /* Pusatkan menu secara horizontal */
+  gap: 20px; /* Jarak antar item menu */
+}
+
+nav a {
+  text-decoration: none; /* Menghilangkan garis bawah */
+  color: #ecf0f1; /* Warna teks */
+  font-weight: bold; /* Menebalkan teks */
+  transition: color 0.3s; /* Transisi halus untuk hover */
+}
+
+nav a:hover {
+  color: #A33757; /* Warna saat hover */
+}
+
+header h1 {
+  font-size: 36px; /* Ukuran judul */
+  font-weight: 700; /* Ketebalan font */
+  color: #A33757; /* Warna judul */
+  margin: 0; /* Menghilangkan margin default */
+}
+/* Kontainer Utama */
+.main-container {
+  display: flex;
+  justify-content: center; /* Pusatkan kontainer */
+  align-items: flex-start; /* Sesuaikan posisi vertikal */
+  width: 90%;
+  max-width: 1200px;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Kontainer untuk Nama dan Foto */
+.profile-container {
+  display: flex;
+  align-items: center; /* Menyelaraskan foto dan teks secara vertikal */
+}
+
+/* Foto di Dalam Kotak */
+.profile-picture {
+  width: 200px; /* Lebar kotak foto */
+  height: 200px; /* Tinggi kotak foto */
+  border-radius: 10px; /* Sudut melingkar */
+  overflow: hidden; /* Menghindari gambar keluar dari kotak */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+  margin-left: 20px; /* Jarak antara foto dan teks */
+}
+
+.profile-picture img {
+  width: 100%; /* Mengisi lebar kotak */
+  height: auto; /* Menjaga proporsi */
+}
 
 /* Header Nama */
 header.namabesar {
@@ -37,18 +106,7 @@ header.namabesar {
   border-radius: 2px;
 }
 
-/* Kontainer Utama */
-.main-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 90%;
-  max-width: 1200px;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-/* Panel Kiri */
+/* Panel Kiri dan Kanan */
 .panel-left,
 .panel-right {
   flex: 1; /* Proporsi sama */
@@ -68,14 +126,12 @@ header.namabesar {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Foto di Tengah */
-.profile-picture img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover; /* Menjaga proporsi */
-  border-radius: 50%; /* Bentuk lingkaran */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan */
-  margin-bottom: 20px;
+/* Kontainer Teks */
+.text-container {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang transparan */
+  border-radius: 10px;
+  margin: 10px 0; /* Margin vertikal */
 }
 
 /* Tombol Media Sosial */
@@ -83,6 +139,7 @@ header.namabesar {
   display: flex;
   justify-content: center;
   gap: 15px; /* Jarak antar tombol */
+  margin-top: 10px; /* Jarak atas untuk footer */
 }
 
 .social-buttons button {
@@ -106,7 +163,74 @@ footer {
   text-align: center;
   padding: 15px 0;
   background-color: #4C1D3D; /* Warna footer */
-  color: #ecf0f1; /* Warna teks */
+  color: #ecf0 
+  f1; /* Warna teks */
   width: 100%;
   margin-top: auto;
+}
+
+/* Menyelaraskan teks di footer */
+footer .social-buttons {
+  justify-content: space-around; /* Menyebar tombol secara merata */
+}
+
+/* Left Panel */
+.services {
+  background-color: #4C1D3D; /* Warna panel */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan panel */
+  margin-bottom: 20px; /* Jarak bawah */
+}
+
+/* Kotak untuk Teks */
+.text-left {
+  margin-bottom: 20px; /* Jarak bawah */
+}
+
+.text-left h1 {
+  font-size: 24px; /* Ukuran judul */
+  margin: 10px 0; /* Jarak atas dan bawah */
+}
+
+.text-left ul {
+  list-style-type: none; /* Menghilangkan bullet */
+  padding: 0; /* Menghilangkan padding default */
+}
+
+.text-left li {
+  background-color: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0; /* Jarak antar list item */
+}
+
+/* Garis Pembatas */
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #852E4E;
+  margin: 10px 0; /* Jarak atas dan bawah */
+}
+
+/* Organisasi */
+.organisation {
+  margin-top: 10px; /* Jarak atas */
+}
+
+/* Exp Section */
+.exp {
+  margin-top: 20px; /* Jarak atas */
+  background-color: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
+  padding: 15px;
+  border-radius: 10px; /* Sudut melingkar */
+}
+
+.exp h2 {
+  font-size: 20px; /* Ukuran judul pengalaman */
+  margin: 10px 0; /* Jarak atas dan bawah */
+}
+
+.exp p {
+  margin: 5px 0; /* Jarak antar paragraf */
 }

@@ -3,7 +3,7 @@ import { getDatabase, ref, onValue } from "firebase/database";
 
 const LeftPanel = () => {
   const [leftPanel, setLeftPanel] = useState({});
-  const [exp, setExp] = useState({}); // State untuk data exp
+  const [exp, setExp] = useState({}); 
 
   useEffect(() => {
     const db = getDatabase();
@@ -27,12 +27,11 @@ const LeftPanel = () => {
     });
   }, []);
 
-  // Mengambil aktivitas dari leftPanel
   const activities = [
     leftPanel.activity1,
     leftPanel.activity2,
     leftPanel.activity3,
-  ].filter(activity => activity); // Menghapus nilai undefined
+  ].filter(activity => activity); 
 
   return (
     <aside className="services">
@@ -51,10 +50,10 @@ const LeftPanel = () => {
         </div>
       </div>
       
-      {/* Div kelas baru untuk exp */}
+      {}
       <div className="exp">
         <h2>{exp.title || "Default Title for Experience"}</h2>
-        <p>{exp.subtitle || "Default Subtitle for Experience"}</p>
+        <p>{exp.subtitle || "Default Subtitle for Experience" }</p>
         <h2>{exp.title1 || "Default Title1 for Experience"}</h2>
         <p>{exp.subtitle1 || "Default Subtitle1 for Experience"}</p>
       </div>

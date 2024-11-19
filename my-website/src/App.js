@@ -1,5 +1,5 @@
 import "./App.css";
-import { Footer, LeftPanel, RightPanel, MainPanel } from "./components";
+import { Header, Footer, LeftPanel, RightPanel, MainPanel } from "./components";
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
         <div className="center">
           <div className="namabesar">
             <Zoom>
-              <h1>Karen Kudemus</h1>
+              <h1>Hi, I'm Karen Kudemus</h1>
             </Zoom>
           </div>
         </div>
